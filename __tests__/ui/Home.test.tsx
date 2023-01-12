@@ -19,4 +19,3 @@ it("has correct image", () => {
 
   expect(image).toBeInTheDocument();
 });
-
