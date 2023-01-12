@@ -14,3 +14,13 @@ it("displays correct band information", async () => {
 
   expect(heading).toBeInTheDocument();
 });
+
+it("displays error message", () => {
+  render(<BandComponent band={null} error="There is an error." />);
+
+  const error = screen.getByRole("heading", {
+    name: /there is an error./i,
+  });
+
+  expect(error).toBeInTheDocument();
+});
